@@ -10,5 +10,9 @@
   <%= @book.number_of_pages %>
 </p>
 
+<p>
+  <strong>Image book</strong>
+  <%= image_tag(@book.picture.url, alt:"Image") if @book.picture? %>
+</p>
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
